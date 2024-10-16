@@ -1,0 +1,6 @@
+authlib
+boto3
+django
+python-dotenv
+requests
+Pillow
