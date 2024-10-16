@@ -10,16 +10,16 @@ class Job(models.Model):
     ]
 
     EXPERIENCE_CHOICES = [
-        ("Beginner", "Nybörjare"),
+        ("Nybörjare", "Nybörjare"),
         ("Junior", "Junior"),
-        ("Experienced", "Erfaren"),
+        ("Erfaren", "Erfaren"),
         ("Senior", "Senior"),
         ("Expert", "Expert")
     ]
 
     WORK_TYPE_CHOICES = [
-        ("On-site", "På plats"),
-        ("Remote", "Distans")
+        ("På plats", "På plats"),
+        ("Distans", "Distans")
     ]
     
     

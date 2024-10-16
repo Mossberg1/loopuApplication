@@ -8,6 +8,7 @@ from core.models.job import Job
 
 
 def workplaces(request: WSGIRequest) -> HttpResponse:
+    job_set = None
     sections = list()
 
     if request.method == 'GET':
@@ -27,9 +28,10 @@ def workplaces(request: WSGIRequest) -> HttpResponse:
         context={
             'session': request.session.get('user'),
             'page_name': 'workplaces',
+            'job_set': job_set,
             'first_section': sections[0],
             'second_section': sections[1],
             'third_section': sections[2],
-            'fourth_section': sections[3]
+            'fourth_section': sections[3],
         }
     )

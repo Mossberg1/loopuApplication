@@ -35,6 +35,12 @@ class Company(models.Model):
         null=True,
         blank=True
     )
+    # FIXME: BEFORE PRODUCTION AZURE FILE STORAGE
+    logo = models.ImageField(
+        upload_to='images/',
+        blank=True,
+        null=True
+    )
     
     
     def __str__(self) -> str:

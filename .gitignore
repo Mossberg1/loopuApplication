@@ -1,2 +1,8 @@
 .env
 venv/
+
+media/documents/*
+media/images/*
+media/descriptions/*
+
+db.sqlite3
