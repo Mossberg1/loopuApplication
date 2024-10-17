@@ -29,9 +29,11 @@ def workplaces(request: WSGIRequest) -> HttpResponse:
             'session': request.session.get('user'),
             'page_name': 'workplaces',
             'job_set': job_set,
-            'first_section': sections[0],
-            'second_section': sections[1],
-            'third_section': sections[2],
-            'fourth_section': sections[3],
+            'first_section': sections[0] if len(sections) > 0 else [],
+            'second_section': sections[1] if len(sections) > 1 else [],
+            'third_section': sections[2] if len(sections) > 2 else [],
+            'fourth_section': sections[3] if len(sections) > 3 else [],
+            'last_page_minus_one': job_set.paginator.num_pages - 1,
+            'last_page_minus_two': job_set.paginator.num_pages - 2
         }
     )
