@@ -80,7 +80,7 @@
 		<! –– Left-Navbar ––>
 		<div id="sidebar" class="fixed bottom-0 left-0 top-16 hidden w-72 bg-white lg:block">
 			<div class="mx-3 mt-6">
-				<div class="mb-1 flex cursor-pointer rounded-lg px-4 py-3 font-medium {% if page_name == 'home' %}bg-blue-500 text-white {% else %}hover:bg-blue-50{% endif %}">
+				<a href="{% url 'index' %}" class="mb-1 flex cursor-pointer rounded-lg px-4 py-3 font-medium {% if page_name == 'index' %}bg-blue-500 text-white {% else %}hover:bg-blue-50{% endif %}">
 					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
 						<path
 							stroke-linecap="round"
@@ -89,9 +89,9 @@
 						/>
 					</svg>
 					<p class="pl-4">Hem</p>
-				</div>
+				</a>
 
-				<div class="mb-1 flex cursor-pointer items-center justify-between rounded-lg px-4 py-3 font-medium {% if page_name == 'inbox' %}bg-blue-500 text-white {% else %}hover:bg-blue-50{% endif %}">
+				<a href="{% url 'inbox' %}" class="mb-1 flex cursor-pointer items-center justify-between rounded-lg px-4 py-3 font-medium {% if page_name == 'inbox' %}bg-blue-500 text-white {% else %}hover:bg-blue-50{% endif %}">
 					<div class="flex">
 						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
 							<path
@@ -102,9 +102,9 @@
 						</svg>
 						<p class="pl-4">Inkorg</p>
 					</div>
-				</div>
+				</a>
 
-				<div class="mb-1 flex cursor-pointer rounded-lg px-4 py-3 font-medium {% if page_name == 'profile' %}bg-blue-500 text-white {% else %}hover:bg-blue-50{% endif %}">
+				<a href="{% url 'profile' %}" class="mb-1 flex cursor-pointer rounded-lg px-4 py-3 font-medium {% if page_name == 'profile' %}bg-blue-500 text-white {% else %}hover:bg-blue-50{% endif %}">
 					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
 						<path
 							stroke-linecap="round"
@@ -113,9 +113,9 @@
 						/>
 					</svg>
 					<p class="pl-4">Din Profil</p>
-				</div>
+				</a>
 
-				<div class="mb-1 flex cursor-pointer rounded-lg px-4 py-3 font-medium {% if page_name == 'workplaces' %}bg-blue-500 text-white{% else %}hover:bg-blue-50{% endif %}">
+				<a href="{% url 'workplaces' %}" class="mb-1 flex cursor-pointer rounded-lg px-4 py-3 font-medium {% if page_name == 'workplaces' %}bg-blue-500 text-white{% else %}hover:bg-blue-50{% endif %}">
 					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-6">
 						<path
 							stroke-linecap="round"
@@ -124,9 +124,9 @@
 						/>
 					</svg>
 					<p class="pl-4">Arbetsplatser</p>
-				</div>
+				</a>
 
-				<div class="mb-1 flex cursor-pointer rounded-lg px-4 py-3 font-medium {% if page_name == 'matches' %}bg-blue-500 text-white{% else %}hover:bg-blue-50{% endif %}">
+				<a href="{% url 'matches' %}" class="mb-1 flex cursor-pointer rounded-lg px-4 py-3 font-medium {% if page_name == 'matches' %}bg-blue-500 text-white{% else %}hover:bg-blue-50{% endif %}">
 					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
 						<path
 							stroke-linecap="round"
@@ -135,9 +135,9 @@
 						/>
 					</svg>
 					<p class="pl-4">Matchningar</p>
-				</div>
+				</a>
 
-				<div class="mb-1 flex cursor-pointer rounded-lg px-4 py-3 font-medium {% if page_name == 'saved_jobs' %}bg-blue-500 text-white{% else %}hover:bg-blue-50{% endif %}">
+				<a href="{% url 'saved' %}" class="mb-1 flex cursor-pointer rounded-lg px-4 py-3 font-medium {% if page_name == 'saved_jobs' %}bg-blue-500 text-white{% else %}hover:bg-blue-50{% endif %}">
 					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
 						<path
 							stroke-linecap="round"
@@ -146,9 +146,9 @@
 						/>
 					</svg>
 					<p class="pl-4">Sparade Jobb</p>
-				</div>
+				</a>
 
-				<div class="mb-1 flex cursor-pointer rounded-lg px-4 py-3 font-medium {% if page_name == 'loopu_plus' %}bg-blue-500 text-white{% else %}hover:bg-blue-50{% endif %}">
+				<a href="{% url 'plus' %}" class="mb-1 flex cursor-pointer rounded-lg px-4 py-3 font-medium {% if page_name == 'loopu_plus' %}bg-blue-500 text-white{% else %}hover:bg-blue-50{% endif %}">
 					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
 						<path
 							stroke-linecap="round"
@@ -157,9 +157,9 @@
 						/>
 					</svg>
 					<p class="ml-4 bg-gradient-to-r from-blue-500 to-pink-500 bg-clip-text font-bold text-white/0">Loopu+</p>
-				</div>
+				</a>
 
-				<div class="mb-1 flex cursor-pointer rounded-lg px-4 py-3 font-medium {% if page_name == 'blog' %}bg-blue-500 text-white{% else %}hover:bg-blue-50{% endif %}">
+				<a href="{% url 'blog' %}" class="mb-1 flex cursor-pointer rounded-lg px-4 py-3 font-medium {% if page_name == 'blog' %}bg-blue-500 text-white{% else %}hover:bg-blue-50{% endif %}">
 					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
 						<path
 							stroke-linecap="round"
@@ -168,7 +168,7 @@
 						/>
 					</svg>
 					<p class="pl-4">Blogg</p>
-				</div>
+				</a>
 			</div>
 		</div>
 		<! –– Left-Navbar ––>

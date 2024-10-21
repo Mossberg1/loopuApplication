@@ -4,6 +4,7 @@ from django.db.models import QuerySet
 from django.http import HttpResponse
 from django.shortcuts import render
 
+from core.utils.search import search_database
 from core.models.job import Job
 
 
@@ -12,7 +13,13 @@ def workplaces(request: WSGIRequest) -> HttpResponse:
     sections = list()
 
     if request.method == 'GET':
-        paginator = Paginator(Job.objects.all(), 24)
+        query = request.GET.get('q')
+        if query:
+            jobs_queryset = search_database(query)
+        else:
+            jobs_queryset = Job.objects.all()
+
+        paginator = Paginator(jobs_queryset, 24)
         page = request.GET.get('page', 1)
         job_set = paginator.get_page(page)
 
